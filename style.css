@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{ 
+    background-color: #2980B9;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width: 40%;
+    height: 500px;
+    margin: 70px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.poster{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.poster img{
+    width: 75%;
+    height: 350px;
+    z-index: 2;
+}
+.posterinfo{
+    background-color: white;
+    width: 18%;
+    height: 530px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    transform: scale(0);
+    transition: transform .3s;
+    position: absolute;
+    top: 170px;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.75);
+}
+.posterinfo h2{
+    font-size: 18px;
+    font-weight: 600;
+}
+.posterinfo h3{
+    font-size: 14px;
+    font-weight: 500;
+    color: #acaaaa;
+    margin-bottom: 30px;
+}
+.actualprice{
+    font-size: 20px;
+    font-weight: 500;
+    color: #2bcd71;
+    margin-bottom: 5px;
+}
+.oldprice{
+    font-size: 15px;
+    font-weight: 500;
+    color: #aaaaaa;
+    margin-bottom: 15px;
+}
+.posterinfo button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #2f2f2f;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: 500ms;
+}
+.posterinfo button:hover{
+    cursor: pointer;
+    background-color: #3f3e3f;
+}
+.poster:hover .posterinfo {
+    transform: scale(1);
+}
+@media (max-width: 1366px){
+    .container{
+        width: 50%;
+    }
+    .posterinfo{
+        width: 22%;
+        height: 550px;
+    }
+}
+@media (max-width: 1024px){
+    .container{
+        width: 65%;
+    }
+    .posterinfo{
+        width: 28%;
+        height: 560px;
+    }
+}
+@media (max-width: 768px){
+    .container{
+        width: 80%;
+    }
+    .posterinfo{
+        width: 35%;
+        height: 570px;
+    }
+}
+@media (max-width: 600px){
+    .container{
+        width: 100%;
+    }
+    .posterinfo{
+        width: 43%;
+        height: 580px;
+    }
+}
+@media (max-width: 425px){
+    .container{
+        width: 100%;
+    }
+    .poster img{
+        width: 90%;
+        height: 300px;
+    }
+    .posterinfo{
+        width: 43%;
+        height: 530px;
+    }
+}
